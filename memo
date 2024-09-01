@@ -1,0 +1,20 @@
+ref:
+docker run -d 
+    -p 27017:27017 
+    --name MERN_Tutorial
+    -v F:\docker_volumes\mongodb_MERN_Tutorial
+    -e MONGODB_INITDB_ROOT_USERNAME=root
+    -e MONGODB_INITDB_ROOT_PASSWORD=8733dg5525!
+    mongo:latest
+
+C:\Users\admin>docker run -d -p 27017:27017 --name MERN_Tutorial -v F:\docker_volumes\mongodb_MERN_Tutorial -e MONGODB_INITDB_ROOT_USERNAME=root -e MONGODB_INITDB_ROOT_PASSWORD=8733dg5525! mongo
+2b10ea5e0a8cfea95de1c363e37a2e55fdfeb18aba142bf8212dccd97d3c7d83
+
+C:\Users\admin>docker exec -it MERN_Tutorial bash
+
+root@2b10ea5e0a8c:/# mongosh
+
+root@39f347ba7c3e:/# ps -ef|grep mongo
+mongodb      1     0  0 12:29 ?        00:00:02 mongod --bind_ip_all
+root        80    56  0 12:34 pts/0    00:00:00 grep mongo
+
